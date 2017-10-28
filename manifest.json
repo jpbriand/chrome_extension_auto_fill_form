@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+    "name": "Autofillform",
+    "description": "",
+    "version": "0.1",
+    "browser_action": {
+        "default_icon": "burger.png"
+    },
+    "permissions": [
+        "<all_urls>"
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}
